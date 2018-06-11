@@ -1,0 +1,26 @@
+﻿@model IEnumerable<WebSampleMultipleDBTable.Models.Employee>
+
+@{
+    ViewBag.Title = "HyperDetails";
+}
+
+@using WebSampleMultipleDBTable.Models
+
+<h2>Department</h2>
+
+<div style="font-family:Arial">
+    <ul>
+
+        @foreach (Employee employee in Model)
+        {
+            
+            <li>
+                @Html.ActionLink(employee.EmployeeName, "Details", new { ID = employee.EmployeeID })
+            </li>
+        }
+
+    </ul>
+</div>
+
+<br />
+@Html.ActionLink("Back to Department List", "Index","Department")

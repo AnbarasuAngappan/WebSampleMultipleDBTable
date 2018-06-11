@@ -1,0 +1,62 @@
+﻿@model WebSampleMultipleDBTable.Models.Employee
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div style="font-family:Arial">
+    <table>
+        <tr>
+            <td>
+                <b>@Html.DisplayNameFor(Model => Model.EmployeeID)</b>
+            </td>
+            <td>
+                @Model.EmployeeID
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>@Html.DisplayNameFor(Model => Model.EmployeeName)</b>
+            </td>
+            <td>
+                @Model.EmployeeName
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>@Html.DisplayNameFor(Model => Model.EmployeeAge)</b>
+            </td>
+            <td>
+                @Model.EmployeeAge
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>@Html.DisplayNameFor(Model => Model.EmployeeGender)</b>
+            </td>
+            <td>
+                @Model.EmployeeGender
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>@Html.DisplayNameFor(Model => Model.EmployeeCity)</b>
+            </td>
+            <td>
+                @Model.EmployeeCity
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>@Html.DisplayNameFor(Model => Model.DepartmentID)</b>
+            </td>
+            <td>
+                @Model.DepartmentID
+            </td>
+        </tr>
+    </table>
+</div>
+<br />
+@Html.ActionLink("Back To Name List", "HyperDetails", new { departmentID = Model.DepartmentID }, null)
